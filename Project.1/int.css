@@ -1,0 +1,117 @@
+/* General Page Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: #e7e7e7;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Background Elements */
+.image-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.layer-blur {
+  height: 0;
+  width: 30rem;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  box-shadow: 0 0 700px 15px white;
+  z-index: -1;
+}
+
+/* Company Info Section */
+.company-info {
+  width: 60%;
+  padding: 20px;
+  background-color: gray;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: black;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Touch & Hover Effect */
+.company-info:hover,
+.company-info:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading Animation */
+h2 {
+  opacity: 0;
+  animation: textFadeIn 1.2s ease-in-out forwards;
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text Animation */
+p {
+  opacity: 0;
+  animation: slideInText 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideInText {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Two-column layout for What We Do & Why Choose ACODER */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+
+.info-section div {
+  width: 48%;
+}
+
+/* Styling for better readability */
+h2 {
+  margin-top: 20px;
+}
+
+p {
+  line-height: 1.6;
+}
